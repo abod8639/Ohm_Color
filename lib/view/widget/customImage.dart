@@ -57,7 +57,7 @@ Widget CustomImage(OhmCalculatorController controller) {
             left: 157.0,
             child: Container(
               width: 17,
-              height: 54,
+              height: 54.5,
               color:
                   controller.colorCodes[controller
                           .multiplierBand

@@ -9,12 +9,16 @@ A Flutter application for color-based calculations using Ohm's law and resistor 
 - User-friendly interface for electronics enthusiasts
 - Cross-platform support (iOS, Android, Web)
 
+## Image 
+
+![icon](assets/icon/icon.png)
+
 ## Installation
 
 1. Make sure you have Flutter installed on your machine
 2. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/ohm_color.git
+   git clone https://github.com/abod8639/Ohm_Color.git
    ```
 3. Navigate to the project directory:
    ```bash

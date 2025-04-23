@@ -66,6 +66,7 @@ flutter:
   assets:
     - assets/image/
     - assets/icon/
+    # - assets/icon/ohm.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -96,4 +97,4 @@ flutter:
 
 flutter_launcher_icons:
   android: "launcher_icon"
-  image_path: "assets/icon/ohm.png"
+  image_path: "assets/icon/icon.png"

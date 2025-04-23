@@ -68,7 +68,7 @@ class _OhmLowPageState extends State<OhmLowPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: const Text('Loi d\'Ohm')),
+      appBar: AppBar(centerTitle: true, title: const Text('Ohm')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -136,7 +136,7 @@ class _OhmLowPageState extends State<OhmLowPage> {
                 child: Column(
                   children: [
                     Text(
-                      'Loi d\'Ohm',
+                      'Ohm',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -144,7 +144,9 @@ class _OhmLowPageState extends State<OhmLowPage> {
                     ),
                     SizedBox(height: 8),
                     Text('V = R × I'),
-                    Text('où:'),
+                    Text('R = V / I'),
+                    Text('I = V / R'),
+                    SizedBox(height: 16),
                     Text('V = Tension en Volts (V)'),
                     Text('R = Résistance en Ohms (Ω)'),
                     Text('I = Intensité en Ampères (A)'),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ohm_color/view/page/ohm_low.dart';
+import 'package:ohm_color/view/page/ohm_deget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       darkTheme: ThemeData.dark(useMaterial3: true),
-      home: const OhmLowPage(),
+      home: const Homepage(),
     );
   }
 }
