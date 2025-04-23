@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:ohm_color/view/page/ohm_deget.dart';
+import 'package:ohm_color/view/page/ohm_low.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -12,6 +14,20 @@ class Mydrawer extends StatelessWidget {
       width: 250,
       child: Column(
         children: [
+          ListTile(
+            leading: const Icon(Icons.home),
+            title: const Text('Home'),
+            onTap: () {
+              Get.offAll(() => const Homepage());
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.perm_data_setting_sharp),
+            title: const Text('OHM LOW'),
+            onTap: () {
+              Get.to(() => const OhmLowPage());
+            },
+          ),
           const SizedBox(height: 80),
 
           const Spacer(),
