@@ -11,7 +11,12 @@ A Flutter application for color-based calculations using Ohm's law and resistor 
 
 ## Image 
 
-![icon](assets/icon/icon.png)
+<!-- ![icon]{assets/icon/icon.png} -->
+
+![icon](assets/image/2.png)
+
+![icon](assets/image/3.png)
+
 
 ## Installation
 
