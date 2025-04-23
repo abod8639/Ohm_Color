@@ -12,7 +12,7 @@ class OhmCalculatorController extends GetxController {
 
   //------------------------------------------------------------------------
 
-  final colorCodes = {
+  final Map<String, Map<String, dynamic>> colorCodes = {
     'Black': {'value': 0, 'color': Colors.black},
     'Brown': {'value': 1, 'color': Colors.brown},
     'Red': {'value': 2, 'color': Colors.red},
@@ -26,15 +26,9 @@ class OhmCalculatorController extends GetxController {
     'Gold': {'value': 10, 'color': const Color.fromARGB(255, 208, 173, 2)},
     'Silver': {'value': 5, 'color': const Color.fromARGB(255, 145, 145, 145)},
   };
-  final tolerancecolorCodes = {
-    // 'Black': {'value': 0, 'color': Colors.black},
+  final Map<String, Map<String, dynamic>> tolerancecolorCodes = {
     'Brown': {'value': 1, 'color': Colors.brown},
     'Red': {'value': 2, 'color': Colors.red},
-    // 'Orange': {'value': 3, 'color': Colors.orange},
-    // 'Yellow': {'value': 4, 'color': Colors.yellow},
-    // 'Green': {'value': 5, 'color': Colors.green},
-    // 'Blue': {'value': 6, 'color': Colors.blue},
-    // 'Violet': {'value': 7, 'color': Colors.purple},
     'Silver': {'value': 5, 'color': const Color.fromARGB(255, 145, 145, 145)},
     'Gold': {'value': 10, 'color': const Color.fromARGB(255, 208, 173, 2)},
     'White': {'value': 20, 'color': Colors.white},
