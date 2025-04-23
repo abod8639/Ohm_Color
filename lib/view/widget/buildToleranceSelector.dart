@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 Widget BuildToleranceSelector(
   Rx<String> selectedValue, {
   required Function(String?) onChanged,
+  required Map<String, Map<String, dynamic>> colorCodes,
 }) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -21,7 +22,9 @@ Widget BuildToleranceSelector(
           value: selectedValue.value,
           onChanged: onChanged,
           items:
-              ['Brown', 'Red'].map<DropdownMenuItem<String>>((String color) {
+              ['Silver', 'Gold', 'Brown', 'Red'].map<DropdownMenuItem<String>>((
+                String color,
+              ) {
                 return DropdownMenuItem<String>(
                   value: color,
                   child: Row(
@@ -30,13 +33,17 @@ Widget BuildToleranceSelector(
                         width: 24,
                         height: 24,
                         decoration: BoxDecoration(
-                          color: (color == 'Brown') ? Colors.brown : Colors.red,
+                          color: colorCodes[color]!['color'] as Color,
+
+                          // (color == 'Gold')
+                          //     ? const Color.fromARGB(255, 208, 173, 2)
+                          //     : const Color.fromARGB(255, 145, 145, 145),
                           border: Border.all(color: Colors.black, width: 1),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       const SizedBox(width: 8),
-                      Text("$color (±${color == 'Brown' ? '1' : '2'}%)"),
+                      Text("$color ${colorCodes[color]!['value']} "),
                     ],
                   ),
                 );

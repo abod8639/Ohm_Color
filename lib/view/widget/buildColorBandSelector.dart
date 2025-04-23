@@ -38,7 +38,7 @@ Widget BuildColorBandSelector(
                         ),
                       ),
                       const SizedBox(width: 8),
-                      Text(color),
+                      Text("$color ${colorCodes[color]!['value']} "),
                     ],
                   ),
                 );

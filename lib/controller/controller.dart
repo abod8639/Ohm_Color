@@ -23,15 +23,17 @@ class OhmCalculatorController extends GetxController {
     'Violet': {'value': 7, 'color': Colors.purple},
     'Gray': {'value': 8, 'color': Colors.grey},
     'White': {'value': 9, 'color': Colors.white},
+    'Gold': {'value': 10, 'color': const Color.fromARGB(255, 208, 173, 2)},
+    'Silver': {'value': 5, 'color': const Color.fromARGB(255, 145, 145, 145)},
   };
 
   //------------------------------------------------------------------------
 
-  var firstBand = 'Black'.obs;
+  var firstBand = 'Brown'.obs;
   var secondBand = 'Black'.obs;
   var thirdBand = 'Black'.obs;
-  var multiplierBand = 'Black'.obs;
-  var toleranceBand = 'Brown'.obs;
+  var multiplierBand = 'Red'.obs;
+  var toleranceBand = 'Silver'.obs;
 
   //------------------------------------------------------------------------
 
@@ -55,7 +57,7 @@ class OhmCalculatorController extends GetxController {
     int secondDigit = colorCodes[secondBand.value]!['value'] as int;
 
     int multiplier = colorCodes[multiplierBand.value]!['value'] as int;
-    int tolerance = (toleranceBand.value == 'Brown') ? 1 : 2;
+    int tolerance = colorCodes[toleranceBand.value]!['value'] as int;
 
     double resistanceValue =
         (firstDigit * 10.0 + secondDigit) * pow(10, multiplier);
@@ -70,7 +72,7 @@ class OhmCalculatorController extends GetxController {
     int secondDigit = colorCodes[secondBand.value]!['value'] as int;
     int thirdDigit = colorCodes[thirdBand.value]!['value'] as int;
     int multiplier = colorCodes[multiplierBand.value]!['value'] as int;
-    int tolerance = (toleranceBand.value == 'Brown') ? 1 : 2;
+    int tolerance = colorCodes[toleranceBand.value]!['value'] as int;
 
     double resistanceValue =
         (firstDigit * 100.0 + secondDigit * 10 + thirdDigit) *

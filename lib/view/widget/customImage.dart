@@ -69,12 +69,13 @@ Widget CustomImage(OhmCalculatorController controller) {
             bottom: 1,
             left: 202,
             child: Container(
-              width: 15,
+              width: 16,
               height: 68,
               color:
-                  (controller.toleranceBand.value == 'Brown')
-                      ? Colors.brown
-                      : Colors.red,
+                  controller.colorCodes[controller
+                          .toleranceBand
+                          .value]!['color']
+                      as Color,
             ),
           ),
         ],
