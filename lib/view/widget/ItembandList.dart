@@ -61,7 +61,7 @@ Widget ItembandList(OhmCalculatorController controller) {
 
       BuildToleranceSelector(
         controller.toleranceBand,
-        colorCodes: controller.colorCodes,
+        colorCodes: controller.tolerancecolorCodes,
         onChanged: (value) => controller.toleranceBand.value = value!,
       ),
       const SizedBox(height: 30),

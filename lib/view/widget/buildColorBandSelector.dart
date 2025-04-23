@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 Widget BuildColorBandSelector(
   String label,
   Rx<String> selectedValue,
-  Map<String, Map<String, dynamic>> colorCodes, {
+  Map<String, Map<String, dynamic>> tolerancecolorCodes, {
   required Function(String?) onChanged,
 }) {
   return Row(
@@ -23,7 +23,9 @@ Widget BuildColorBandSelector(
           value: selectedValue.value,
           onChanged: onChanged,
           items:
-              colorCodes.keys.map<DropdownMenuItem<String>>((String color) {
+              tolerancecolorCodes.keys.map<DropdownMenuItem<String>>((
+                String color,
+              ) {
                 return DropdownMenuItem<String>(
                   value: color,
                   child: Row(
@@ -32,13 +34,13 @@ Widget BuildColorBandSelector(
                         width: 24,
                         height: 24,
                         decoration: BoxDecoration(
-                          color: colorCodes[color]!['color'] as Color,
+                          color: tolerancecolorCodes[color]!['color'] as Color,
                           border: Border.all(color: Colors.black, width: 1),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       const SizedBox(width: 8),
-                      Text("$color ${colorCodes[color]!['value']} "),
+                      Text("$color ${tolerancecolorCodes[color]!['value']} "),
                     ],
                   ),
                 );
